@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
   $.getJSON('features.js').done(function (data) {
 
     // Template loded from templates/features.htm with id timelineBlocks
-    $.get('../templates/features.htm', function(templates){
+    $.get('https://raw.githubusercontent.com/weavler/marketing/gh-pages/templates/features.htm', function(templates){
       var template = $(templates).filter('#timelineBlocks').html();
       $('#feature-container').append(Mustache.render(template, data));
 
